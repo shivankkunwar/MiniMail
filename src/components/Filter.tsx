@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface FilterProps {
   currentFilter: string;
@@ -10,20 +10,26 @@ const Filter: React.FC<FilterProps> = ({ currentFilter, onFilterChange }) => {
     <div className="filter">
       <span>Filter By:</span>
       <button
-        className={currentFilter === 'unread' ? 'active' : ''}
-        onClick={() => onFilterChange('unread')}
+        className={currentFilter === "" ? "active" : ""}
+        onClick={() => onFilterChange("")}
+      >
+        All
+      </button>
+      <button
+        className={currentFilter === "unread" ? "active" : ""}
+        onClick={() => onFilterChange("unread")}
       >
         Unread
       </button>
       <button
-        className={currentFilter === 'read' ? 'active' : ''}
-        onClick={() => onFilterChange('read')}
+        className={currentFilter === "read" ? "active" : ""}
+        onClick={() => onFilterChange("read")}
       >
         Read
       </button>
       <button
-        className={currentFilter === 'favorites' ? 'active' : ''}
-        onClick={() => onFilterChange('favorites')}
+        className={currentFilter === "favorites" ? "active" : ""}
+        onClick={() => onFilterChange("favorites")}
       >
         Favorites
       </button>
